@@ -21,6 +21,8 @@ public class CreateArray {
 		String [] stringArray = {"a","b","c","d"}; //.......................O(1)
 		System.out.println(Arrays.toString(stringArray));
 		
+		
+		
 	}
 
 }

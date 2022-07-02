@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class ArrayInsert {
 
 	public static void main(String[] args) {
@@ -18,10 +16,10 @@ public class ArrayInsert {
 		sda.insertValue(6, 9);
 		sda.insertValue(7, 100);
 
-		
-		//var result = sda.arr[0];
-		System.out.println("Array Traversal");
+		System.out.println("\n\nArray Traversal");
 		sda.arrayTraversal();
+		System.out.println("\n\nArray Search");
+		sda.searchInArray(9);
 	}
 
 }
@@ -66,4 +64,15 @@ class SingleDimensionalArray {
 		}
 	}
 
+	////// Search value in array //// {Linear Search }
+	public void searchInArray(int valueToSearch) {
+
+		for (int i = 0; i < arr.length; i++) {	//......................................................o(N)													
+			if (arr[i] == valueToSearch) {//............................................................o(1)
+				System.out.println("The value of: " + valueToSearch + " is found at index " + i);//.....o(1)
+				return;//...............................................................................o(1)
+			}
+		}
+		System.out.println("The value: " + valueToSearch + " doesnt exist in the array");//...............o(1)
+	}
 }
