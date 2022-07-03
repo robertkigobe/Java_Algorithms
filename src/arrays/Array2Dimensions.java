@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class Array2Dimensions {
 
 	public static void main(String[] args) {
-		
-		TwoDimensionalArray sda = new TwoDimensionalArray(3,3);
-		
+
+		TwoDimensionalArray sda = new TwoDimensionalArray(3, 3);
+
 		sda.insertIn2DArray(0, 0, 11);
 		sda.insertIn2DArray(0, 1, 12);
 		sda.insertIn2DArray(0, 2, 13);
@@ -17,8 +17,10 @@ public class Array2Dimensions {
 		sda.insertIn2DArray(2, 0, 51);
 		sda.insertIn2DArray(2, 1, 52);
 		sda.insertIn2DArray(2, 2, 53);
-		
+
 		System.out.println(Arrays.deepToString(sda.arr));
+		
+		sda.readFrom2DArray(2,2);
 
 	}
 
@@ -51,6 +53,16 @@ class TwoDimensionalArray {
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("The array index is not accesible");
+		}
+	}
+
+	// Accessing a cell in a 2D array
+	public void readFrom2DArray(int row, int col) {
+		System.out.println("\nReading from row " + row + ", and column " + col);
+		try {
+			System.out.println("The cell value is: " + arr[row][col]);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("2D Array index not available");
 		}
 	}
 
