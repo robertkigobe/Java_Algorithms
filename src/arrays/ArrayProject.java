@@ -5,10 +5,12 @@ import java.util.*;
 public class ArrayProject {
 
 	public static void main(String[] args) {
+		
 		Scanner console = new Scanner(System.in);
 		System.out.print("How many days' temperatures? ");
 		int numDays = console.nextInt();
 		int[] temps = new int[numDays];
+		
 		// record temperatures and find average
 		int sum = 0;
 		for (int i = 0; i < numDays; i++) {
