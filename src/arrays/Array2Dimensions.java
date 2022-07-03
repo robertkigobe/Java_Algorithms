@@ -20,11 +20,15 @@ public class Array2Dimensions {
 
 		System.out.println("\nPrint a 2D array");
 		System.out.println(Arrays.deepToString(sda.arr));
-		
+
 		System.out.println("\nReading from a 2D array cell");
-		sda.readFrom2DArray(2,2);
+		sda.readFrom2DArray(2, 2);
+
 		System.out.println("\nTraversing a 2D array");
 		sda.traverse2DArray();
+
+		System.out.println("\nSearching a 2D array");
+		sda.search2DArray(33);
 
 	}
 
@@ -51,7 +55,7 @@ class TwoDimensionalArray {
 		try {
 			if (arr[row][col] == Integer.MIN_VALUE) {
 				arr[row][col] = value;
-				System.out.println("Value " + value + " succesfully insterted at position " + row+","+col);
+				System.out.println("Value " + value + " succesfully insterted at position " + row + "," + col);
 			} else {
 				System.out.println("The cell is already occupied");
 			}
@@ -69,18 +73,32 @@ class TwoDimensionalArray {
 			System.out.println("2D Array index not available");
 		}
 	}
-	
-	//Traversing a 2D Array
+
+	// Traversing a 2D Array
 	public void traverse2DArray() {
-		
-		
-		
-		for(int row = 0; row < arr.length; row ++) {
-			for (int col =0; col < arr[0].length; col++) {
-				System.out.print(arr[row][col]+ " ");
+
+		for (int row = 0; row < arr.length; row++) {
+			for (int col = 0; col < arr[0].length; col++) {
+				System.out.print(arr[row][col] + " ");
 			}
 			System.out.println();
 		}
+	}
+
+	// Searching for a value in a 2D Array
+	public void search2DArray(int value) {
+
+		for (int row = 0; row < arr.length; row++) {
+			for (int col = 0; col < arr[0].length; col++) {
+
+				if (arr[row][col] == value) {
+					System.out.println("Value: " + value + " found at row: " + row + " column: " + col);
+					return;
+				}
+
+			}
+		}
+		System.out.println("Value not found in the 2D Array");
 	}
 
 }
