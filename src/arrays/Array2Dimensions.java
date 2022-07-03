@@ -30,6 +30,13 @@ public class Array2Dimensions {
 		System.out.println("\nSearching a 2D array");
 		sda.search2DArray(33);
 
+		System.out.println("\nDelete from a 2D array");
+		System.out.println("Print a 2D array before delete");
+		sda.traverse2DArray();
+		sda.deleteFrom2DArray(2, 1);
+		System.out.println("\nPrint a 2D array after delete");
+		sda.traverse2DArray();
+
 	}
 
 }
@@ -99,6 +106,19 @@ class TwoDimensionalArray {
 			}
 		}
 		System.out.println("Value not found in the 2D Array");
+	}
+
+	// Deleting a value in a 2D Array
+	public void deleteFrom2DArray(int row, int col) {
+		try {
+
+			arr[row][col] = Integer.MIN_VALUE;
+
+			System.out.println("\nValue succesfully deleted at position " + row + "," + col);
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("The array index is not accesible");
+		}
 	}
 
 }
