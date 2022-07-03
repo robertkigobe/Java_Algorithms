@@ -18,9 +18,13 @@ public class Array2Dimensions {
 		sda.insertIn2DArray(2, 1, 52);
 		sda.insertIn2DArray(2, 2, 53);
 
+		System.out.println("\nPrint a 2D array");
 		System.out.println(Arrays.deepToString(sda.arr));
 		
+		System.out.println("\nReading from a 2D array cell");
 		sda.readFrom2DArray(2,2);
+		System.out.println("\nTraversing a 2D array");
+		sda.traverse2DArray();
 
 	}
 
@@ -47,7 +51,7 @@ class TwoDimensionalArray {
 		try {
 			if (arr[row][col] == Integer.MIN_VALUE) {
 				arr[row][col] = value;
-				System.out.println("Value " + value + " succesfully insterted at position " + arr[row] + arr[col]);
+				System.out.println("Value " + value + " succesfully insterted at position " + row+","+col);
 			} else {
 				System.out.println("The cell is already occupied");
 			}
@@ -63,6 +67,19 @@ class TwoDimensionalArray {
 			System.out.println("The cell value is: " + arr[row][col]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("2D Array index not available");
+		}
+	}
+	
+	//Traversing a 2D Array
+	public void traverse2DArray() {
+		
+		
+		
+		for(int row = 0; row < arr.length; row ++) {
+			for (int col =0; col < arr[0].length; col++) {
+				System.out.print(arr[row][col]+ " ");
+			}
+			System.out.println();
 		}
 	}
 
