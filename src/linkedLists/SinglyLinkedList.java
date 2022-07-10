@@ -56,4 +56,30 @@ public class SinglyLinkedList {
 		size ++;
 		
 	}
+
+//Traversing a singly Linked list
+	public void traverseSinglyLlinkedList() {
+		//check if head exists
+		if(head == null) {
+			System.out.println("Linked List doesnt exist");
+		} else {
+			Node  tempNode = head;
+			
+			for(int i =0; i<size; i++) {
+				System.out.print( tempNode.value);
+				
+				if(i!=size-1) {
+					System.out.print("->" );
+				}
+				
+				tempNode = tempNode.next;
+			}
+		}
+		System.out.println();
+	}
+	
+	
+	//loop all nodes 
+	
+	//if reference is null, terminate
 }
