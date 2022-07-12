@@ -29,6 +29,7 @@ public class CircularSinglyLinkedList {
 		// check if head is null so as to insert at the beginig of the linked list and return
 		if(head == null) {
 			createCSLL(nodeValue);
+			System.out.println("Linked list is empty so a new node is created");
 			return;
 			
 			//insert at the begining
@@ -54,12 +55,34 @@ public class CircularSinglyLinkedList {
 			}
 			node.next = tempNode.next;
 			tempNode.next = node;
+			//System.out.println("Node succesfully inserted");
 			
 		}
+		System.out.println("Node succesfully inserted");
 		size++;
 		
 	}
 	
-	
+	//Traversing a circular singly Linked list
+		public void traverseCircularSinglyLlinkedList() {
+			
+			Node tempNode =  head;
+			
+			if(head == null) {
+				System.out.println("Linked does not exist");
+			} else {
+				
+				for(int i =0; i<size; i++) {
+					
+					System.out.print(tempNode.value);
+					if(i!=size-1) {
+						System.out.print(" -> ");
+					}
+					tempNode = tempNode.next;
+					
+				}
+				
+			}
+		}
 
 }

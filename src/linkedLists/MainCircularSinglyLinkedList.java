@@ -23,6 +23,9 @@ public class MainCircularSinglyLinkedList {
 		cSLL.insertNodeIntoCSLL(37, 10);
 		
 		System.out.println("\nThe size of the CSLL after instert is: "+ cSLL.size);
+		
+		System.out.println("\nTraversing the CSLL");
+		cSLL.traverseCircularSinglyLlinkedList();
 	}
 
 }
