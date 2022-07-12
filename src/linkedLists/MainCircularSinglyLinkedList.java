@@ -26,6 +26,9 @@ public class MainCircularSinglyLinkedList {
 		
 		System.out.println("\nTraversing the CSLL");
 		cSLL.traverseCircularSinglyLlinkedList();
+		
+		System.out.println("\n\nSearch the CSLL");
+		cSLL.searchCircularSinglyLlinkedList(97);
 	}
 
 }

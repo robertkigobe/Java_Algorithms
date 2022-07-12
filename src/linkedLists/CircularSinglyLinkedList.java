@@ -84,5 +84,30 @@ public class CircularSinglyLinkedList {
 				
 			}
 		}
+		
+		//Search a circular singly Linked list
+				public boolean searchCircularSinglyLlinkedList(int nodeValue) {
+					
+					Node tempNode =  head;
+					
+					if(head != null) {
+				
+						
+						for(int i =0; i<size; i++) {
+							
+							if(tempNode.value == nodeValue ) {
+								
+								System.out.println("Searched value  exists at location: " + i);
+								return true;
+							}
+							
+							tempNode = tempNode.next;
+							
+						}
+						
+					}
+					System.out.println("Node does not exist");
+					return false;
+				}
 
 }
