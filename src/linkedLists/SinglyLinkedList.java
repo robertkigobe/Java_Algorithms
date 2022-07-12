@@ -15,7 +15,7 @@ public class SinglyLinkedList {
 		node.value = nodeValue;
 		head = node;
 		tail = node;
-		size = 1;
+		size++;
 
 		return node;
 	}
@@ -146,6 +146,15 @@ public class SinglyLinkedList {
 
 		}
 
+	}
+
+	// delete entire Singly linked list
+	public void deleteLinkedList() {
+		// this is done by setting tail and head reference to null
+		head = null;
+		tail = null;
+		size = 0;
+		System.out.println("The SLL deleted successfully");
 	}
 
 }

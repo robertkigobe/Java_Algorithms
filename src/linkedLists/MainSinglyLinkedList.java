@@ -1,6 +1,6 @@
 package linkedLists;
 
-public class Main {
+public class MainSinglyLinkedList {
 
 	public static void main(String[] args) {
 
@@ -31,6 +31,13 @@ public class Main {
 		
 		//delete from a linked list
 		sLL.deleteNode(7);
+		System.out.println("The number of nodes after a node delete is: " + sLL.size);
+		
+		//delete entire sll
+		sLL.deleteLinkedList();
+		//Traverse linked list
+		sLL.traverseSinglyLlinkedList();
+	
 		System.out.println("The number of nodes is: " + sLL.size);
 	}
 
