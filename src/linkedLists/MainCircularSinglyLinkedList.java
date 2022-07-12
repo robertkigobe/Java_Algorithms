@@ -33,6 +33,11 @@ public class MainCircularSinglyLinkedList {
 		// delete from a linked list
 		cSLL.deleteNode(7);
 		System.out.println("\nThe number of nodes after a node delete is: " + cSLL.size);
+		
+		// delete entire circular linked list
+		System.out.println("\nDelete the CSLL");
+		cSLL.deleteLinkedList();
+		cSLL.traverseCircularSinglyLlinkedList();
 	}
 
 }

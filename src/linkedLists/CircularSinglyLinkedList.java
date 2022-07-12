@@ -164,5 +164,15 @@ public class CircularSinglyLinkedList {
 		}
 
 	}
+	
+	// delete entire Circular Singly linked list
+		public void deleteLinkedList() {
+			// this is done by setting tail and head reference to null
+			head = null;
+			tail.next = null;
+			tail = null;
+			size = 0;
+			System.out.println("The CSLL deleted successfully");
+		}
 
 }
