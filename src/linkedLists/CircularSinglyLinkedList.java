@@ -2,15 +2,15 @@ package linkedLists;
 
 public class CircularSinglyLinkedList {
 
-	public Node head;
-	public Node node;
-	public Node tail;
+	public SinglyLLNode head;
+	public SinglyLLNode node;
+	public SinglyLLNode tail;
 	public int size;
 
 	// create circular singly linked list
-	public Node createCSLL(int nodeValue) {
-		head = new Node();
-		node = new Node();
+	public SinglyLLNode createCSLL(int nodeValue) {
+		head = new SinglyLLNode();
+		node = new SinglyLLNode();
 		node.next = node;
 		node.value = nodeValue;
 		head = node;
@@ -23,7 +23,7 @@ public class CircularSinglyLinkedList {
 	public void insertNodeIntoCSLL(int nodeValue, int location) {
 
 		// create new node and assign value
-		Node node = new Node();
+		SinglyLLNode node = new SinglyLLNode();
 		node.value = nodeValue;
 
 		// check if head is null so as to insert at the beginig of the linked list and
@@ -47,7 +47,7 @@ public class CircularSinglyLinkedList {
 			node.next = head;
 			// inset at a location
 		} else {
-			Node tempNode = new Node();
+			SinglyLLNode tempNode = new SinglyLLNode();
 			int index = 0;
 			while (index < location - 1) {
 				tempNode = tempNode.next;
@@ -66,7 +66,7 @@ public class CircularSinglyLinkedList {
 	// Traversing a circular singly Linked list
 	public void traverseCircularSinglyLlinkedList() {
 
-		Node tempNode = head;
+		SinglyLLNode tempNode = head;
 
 		if (head == null) {
 			System.out.println("Linked does not exist");
@@ -88,7 +88,7 @@ public class CircularSinglyLinkedList {
 	// Search a circular singly Linked list
 	public boolean searchCircularSinglyLlinkedList(int nodeValue) {
 
-		Node tempNode = head;
+		SinglyLLNode tempNode = head;
 
 		if (head != null) {
 
@@ -134,7 +134,7 @@ public class CircularSinglyLinkedList {
 		} else if (location >= size) {
 
 			// find node before first node
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 			for (int i = 0; i < size - 1; i++) {
 				tempNode = tempNode.next;
 			}
@@ -153,7 +153,7 @@ public class CircularSinglyLinkedList {
 		} else {
 
 			// find node at location
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 			for (int i = 0; i < location - 1; i++) {
 				tempNode = tempNode.next;
 			}

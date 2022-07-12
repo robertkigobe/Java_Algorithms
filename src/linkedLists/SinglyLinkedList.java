@@ -2,16 +2,16 @@ package linkedLists;
 
 public class SinglyLinkedList {
 
-	public Node head;
-	public Node tail;
+	public SinglyLLNode head;
+	public SinglyLLNode tail;
 	public int size;
 
 	// create a linked singly list
 
-	public Node createSinglyLinkedList(int nodeValue) {
+	public SinglyLLNode createSinglyLinkedList(int nodeValue) {
 
-		head = new Node();
-		Node node = new Node();
+		head = new SinglyLLNode();
+		SinglyLLNode node = new SinglyLLNode();
 		node.value = nodeValue;
 		head = node;
 		tail = node;
@@ -23,7 +23,7 @@ public class SinglyLinkedList {
 	// insert a node in a singly list
 	public void insertIntoLinkedList(int nodeValue, int location) {
 		// create node that takes the node value
-		Node node = new Node();
+		SinglyLLNode node = new SinglyLLNode();
 		node.value = nodeValue;
 		// check if linked list is already created
 		if (head == null) {
@@ -42,13 +42,13 @@ public class SinglyLinkedList {
 
 			// else insert at a given location
 		} else {
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 			int index = 0;
 			while (index < location - 1) {
 				tempNode = tempNode.next;
 				index++;
 			}
-			Node nextNode = tempNode;
+			SinglyLLNode nextNode = tempNode;
 			tempNode.next = node;
 			node.next = tempNode;
 
@@ -63,7 +63,7 @@ public class SinglyLinkedList {
 		if (head == null) {
 			System.out.println("Linked List doesnt exist");
 		} else {
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 
 			// loop all nodes
 			for (int i = 0; i < size; i++) {
@@ -85,7 +85,7 @@ public class SinglyLinkedList {
 		// check if there is a head node otherwise terminate
 		if (head != null) {
 			// create a temporary node to traverse the linked list
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 			// loop through until you get the value and return the node location
 			for (int i = 0; i < size; i++) {
 				// get value to be searched
@@ -124,7 +124,7 @@ public class SinglyLinkedList {
 		} else if (location >= size) {
 
 			// find node before first node
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 			for (int i = 0; i < size - 1; i++) {
 				tempNode = tempNode.next;
 			}
@@ -135,7 +135,7 @@ public class SinglyLinkedList {
 		} else {
 
 			// find node before first node
-			Node tempNode = head;
+			SinglyLLNode tempNode = head;
 			for (int i = 0; i < location - 1; i++) {
 				tempNode = tempNode.next;
 			}
