@@ -11,7 +11,7 @@ public class MainDoubleLinkedList {
 		System.out.println("Double linked List created succesfully with size: " + dLL.size);
 		
 		// insert into linked list
-		dLL.insertInDLL(9, 1);		
+		dLL.insertInDLL(9, 0);		
 		dLL.insertInDLL(13, 2);
 		dLL.insertInDLL(10, 3);		
 		dLL.insertInDLL(8, 4);			
@@ -21,8 +21,13 @@ public class MainDoubleLinkedList {
 		dLL.insertInDLL(27, 8);
 		dLL.insertInDLL(57, 9);
 		dLL.insertInDLL(67, 10);
+		System.out.println("Double linked Node 2 is : " + dLL.head.next.value);
 		
 		System.out.println("Double linked List created succesfully with size: " + dLL.size);
+		
+		//Traverse Double linked list
+		System.out.println("Traverse a Double linked List\n");
+		dLL.traverseDoubleLinkedList();
 
 	}
 
