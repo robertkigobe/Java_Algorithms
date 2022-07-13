@@ -8,7 +8,7 @@ public class CircularDoubleLinkedList {
 	public DoubleLLNode tail;
 
 	// Create a double linked list
-	public DoubleLLNode createDLL(int nodeValue) {
+	public DoubleLLNode createcDLL(int nodeValue) {
 
 		DoubleLLNode node = new DoubleLLNode();
 		node.next = null;
@@ -29,25 +29,27 @@ public class CircularDoubleLinkedList {
 	}
 
 	// Insert into a double linked list
-	public void insertInDLL(int nodeValue, int location) {
+	public void insertIncDLL(int nodeValue, int location) {
 		DoubleLLNode node = new DoubleLLNode();
 		node.value = nodeValue;
 
 		if (head == null) {
-			createDLL(nodeValue);
+			createcDLL(nodeValue);
 			return;
 			// Inserting at the begining of the DLL
 		} else if (location == 0) {
 
 			node.next = head;
-			node.previous = null;
+			node.previous = tail;
 			head.previous = node;
+			tail.next = node;
 			head = node;
 
 		} else if (location >= size) {
-			node.next = null;
-			tail.next = node;
+			node.next = head;
 			node.previous = tail;
+			head.previous = node;
+			tail.next = node;
 			tail = node;
 		} else {
 			DoubleLLNode tempNode = head;
@@ -57,10 +59,10 @@ public class CircularDoubleLinkedList {
 				tempNode = tempNode.next;
 				index++;
 			}
-
+			
 			node.previous = tempNode;
 			node.next = tempNode.next;
-			tempNode.next = node;
+			node = tempNode.next ;
 			node.next.previous = node;
 		}
 
