@@ -30,7 +30,7 @@ public class CircularSinglyLinkedList {
 		// return
 		if (head == null) {
 			createCSLL(nodeValue);
-			System.out.println("Linked list is empty so a new node is created");
+			
 			return;
 
 			// insert at the begining
