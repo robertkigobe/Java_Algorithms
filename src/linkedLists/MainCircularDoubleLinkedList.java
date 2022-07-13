@@ -26,11 +26,11 @@ public class MainCircularDoubleLinkedList {
 
 		System.out.println("Double linked List created succesfully with size: " + cDLL.size);
 
-		/**
 		// Traverse Double linked list
 		System.out.println("Traverse a Double linked List\n");
-		cDLL.traverseDoubleLinkedList();
+		cDLL.traverseCircularDoubleLinkedList();
 
+		/**
 		// Reverse Traverse Double linked list
 		System.out.println("\nTraverse a Double linked List");
 		cDLL.reverseTraverseDoubleLinkedList();

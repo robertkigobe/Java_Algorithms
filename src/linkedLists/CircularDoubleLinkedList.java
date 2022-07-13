@@ -70,8 +70,8 @@ public class CircularDoubleLinkedList {
 
 	}
 
-	// Traversing a double Linked list
-	public void traverseDoubleLinkedList() {
+	// Traversing a circular double Linked list
+	public void traverseCircularDoubleLinkedList() {
 
 		DoubleLLNode tempNode = head;
 
