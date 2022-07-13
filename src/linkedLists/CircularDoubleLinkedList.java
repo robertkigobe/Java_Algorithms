@@ -115,7 +115,7 @@ public class CircularDoubleLinkedList {
 	}
 
 	// Search a Double Linked list
-	public boolean searchDoublelinkedList(int nodeValue) {
+	public boolean searchCircularDoublelinkedList(int nodeValue) {
 
 		DoubleLLNode tempNode = head;
 

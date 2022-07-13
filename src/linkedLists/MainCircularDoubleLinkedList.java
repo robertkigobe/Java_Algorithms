@@ -33,17 +33,18 @@ public class MainCircularDoubleLinkedList {
 		System.out.println("\nReverse Traverse a Double linked List");
 		cDLL.reverseTraverseCircularDoubleLinkedList();
 
-		/**
 		System.out.println("\n\nSearch the CSLL");
-		cDLL.searchDoublelinkedList(37);
+		cDLL.searchCircularDoublelinkedList(37);
 
+		/**
 		// delete from a linked list
 		cDLL.deleteNode(9);
 		System.out.println("\nThe number of nodes after a node delete is: " + cDLL.size);
 
 		System.out.println("\nDelete the cDLL");
 		cDLL.deleteLinkedList();
-		cDLL.traverseDoubleLinkedList(); */
+		cDLL.traverseDoubleLinkedList(); 
+		*/
 
 	}
 
