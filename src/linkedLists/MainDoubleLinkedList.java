@@ -40,6 +40,10 @@ public class MainDoubleLinkedList {
 		dLL.deleteNode(9);
 		System.out.println("\nThe number of nodes after a node delete is: " + dLL.size);
 
+		System.out.println("\nDelete the DLL");
+		dLL.deleteLinkedList();
+		dLL.traverseDoubleLinkedList();
+
 	}
 
 }

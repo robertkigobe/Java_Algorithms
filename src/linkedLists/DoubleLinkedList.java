@@ -188,4 +188,23 @@ public class DoubleLinkedList {
 
 	}
 
+	// delete entire Double linked list
+	public void deleteLinkedList() {
+		// this is done by setting tail and head reference to null
+
+		DoubleLLNode tempNode = head;
+
+		for (int i = 0; i < size; i++) {
+
+			tempNode.previous = null;
+
+			tempNode = tempNode.next;
+		}
+
+		head = null;
+		tail = null;
+		size = 0;
+		System.out.println("The CSLL deleted successfully");
+	}
+
 }
