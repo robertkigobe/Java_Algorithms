@@ -110,6 +110,30 @@ public class DoubleLinkedList {
 
 			}
 		}
+		
+		// Search a Double  Linked list
+		public boolean searchDoublelinkedList(int nodeValue) {
+
+			DoubleLLNode tempNode = head;
+
+			if (head != null) {
+
+				for (int i = 0; i < size; i++) {
+
+					if (tempNode.value == nodeValue) {
+
+						System.out.println("Searched value  exists at location: " + i);
+						return true;
+					}
+
+					tempNode = tempNode.next;
+
+				}
+
+			}
+			System.out.println("Node does not exist");
+			return false;
+		}
 
 
 }
