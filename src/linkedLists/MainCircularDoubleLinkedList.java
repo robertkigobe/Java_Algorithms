@@ -22,19 +22,18 @@ public class MainCircularDoubleLinkedList {
 		cDLL.insertIncDLL(27, 8);
 		cDLL.insertIncDLL(57, 9);
 		cDLL.insertIncDLL(67, 10);
-		System.out.println("Double linked Node 2 is : " + cDLL.head.next.value);
 
 		System.out.println("Double linked List created succesfully with size: " + cDLL.size);
 
 		// Traverse Double linked list
-		System.out.println("Traverse a Double linked List\n");
+		System.out.println("Traverse a Double linked List");
 		cDLL.traverseCircularDoubleLinkedList();
 
-		/**
 		// Reverse Traverse Double linked list
-		System.out.println("\nTraverse a Double linked List");
-		cDLL.reverseTraverseDoubleLinkedList();
+		System.out.println("\nReverse Traverse a Double linked List");
+		cDLL.reverseTraverseCircularDoubleLinkedList();
 
+		/**
 		System.out.println("\n\nSearch the CSLL");
 		cDLL.searchDoublelinkedList(37);
 

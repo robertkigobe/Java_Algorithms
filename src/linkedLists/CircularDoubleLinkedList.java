@@ -93,7 +93,7 @@ public class CircularDoubleLinkedList {
 	}
 
 	// Reverse Traversing a double Linked list
-	public void reverseTraverseDoubleLinkedList() {
+	public void reverseTraverseCircularDoubleLinkedList() {
 
 		DoubleLLNode tempNode = tail;
 
