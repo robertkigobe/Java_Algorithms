@@ -205,6 +205,9 @@ public class CircularDoubleLinkedList {
 	public void deleteLinkedList() {
 		// this is done by setting tail and head reference to null
 
+		head.previous = null;
+		tail.next = null;
+
 		DoubleLLNode tempNode = head;
 
 		for (int i = 0; i < size; i++) {
@@ -213,7 +216,6 @@ public class CircularDoubleLinkedList {
 
 			tempNode = tempNode.next;
 		}
-
 		head = null;
 		tail = null;
 		size = 0;

@@ -40,10 +40,10 @@ public class MainCircularDoubleLinkedList {
 		cDLL.deleteNode(7);
 		System.out.println("\nThe number of nodes after a node delete is: " + cDLL.size);
 
-		/**
 		System.out.println("\nDelete the cDLL");
 		cDLL.deleteLinkedList();
-		cDLL.traverseDoubleLinkedList(); 
+		cDLL.traverseCircularDoubleLinkedList(); 
+		/**
 		*/
 
 	}
