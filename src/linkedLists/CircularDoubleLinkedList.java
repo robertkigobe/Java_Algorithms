@@ -145,35 +145,41 @@ public class CircularDoubleLinkedList {
 
 		if (head == null) {
 			System.out.println("Linked List does not exist");
+			return;
 		} else
 		// delete if it is only one node i.e head
 
 		if (location == 0) {
-
+			//if we only have one element in CDLL
 			if (size == 1) {
+				head.previous = null;
 				head = tail = null;
 				size--;
 				return;
-				// deleting firt element in a size more than 1
+				// deleting first element in a size more than 1
 			} else {
 				head = head.next;
-				head.previous = null;
+				head.previous = tail;
+				tail.next = head;
 				size--;
+				return;
 			}
 			// deleting at end of DLL
 		} else if (location >= size) {
 
 			// find node before last node
 			DoubleLLNode tempNode = tail.previous;
-
+			//if only one node
 			if (size == 1) {
+				head.previous = null;
 				head = tail = null;
 				size--;
 				return;
 				// deleting first element in a size more than 1
 			} else {
-				tempNode.next = null;
-				tail = tempNode;
+				tail.next = head;
+				tail = tail.previous;
+				head.previous = tail;
 				size--;
 			}
 
@@ -184,9 +190,11 @@ public class CircularDoubleLinkedList {
 			for (int i = 0; i < location - 1; i++) {
 				tempNode = tempNode.next;
 			}
-
+			
+			
 			tempNode.next = tempNode.next.next;
 			tempNode.next.previous = tempNode;
+			
 			size--;
 
 		}
