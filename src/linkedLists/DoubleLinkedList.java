@@ -86,54 +86,106 @@ public class DoubleLinkedList {
 
 		}
 	}
-	
+
 	// Reverse Traversing a double Linked list
-		public void reverseTraverseDoubleLinkedList() {
+	public void reverseTraverseDoubleLinkedList() {
 
-			DoubleLLNode tempNode = tail;
+		DoubleLLNode tempNode = tail;
 
-			if (head == null) {
-				System.out.println("Linked does not exist");
+		if (head == null) {
+			System.out.println("Linked does not exist");
+		} else {
+
+			for (int i = 0; i < size; i++) {
+
+				System.out.print(tempNode.value);
+				if (i != size - 1) {
+					System.out.print(" -> ");
+				}
+				tempNode = tempNode.previous;
+
+			}
+
+		}
+	}
+
+	// Search a Double Linked list
+	public boolean searchDoublelinkedList(int nodeValue) {
+
+		DoubleLLNode tempNode = head;
+
+		if (head != null) {
+
+			for (int i = 0; i < size; i++) {
+
+				if (tempNode.value == nodeValue) {
+
+					System.out.println("Searched value  exists at location: " + i);
+					return true;
+				}
+
+				tempNode = tempNode.next;
+
+			}
+
+		}
+		System.out.println("Node does not exist");
+		return false;
+	}
+
+	// Delete a node from a circular singly Linked List
+	public void deleteNode(int location) {
+
+		// check if head exists otherwise return
+
+		if (head == null) {
+			System.out.println("Linked List does not exist");
+		} else
+		// delete if it is only one node i.e head
+
+		if (location == 0) {
+
+			if (size == 1) {
+				head = tail = null;
+				size--;
+				return;
+				// deleting firt element in a size more than 1
 			} else {
-				
-				
-
-				for (int i = 0; i <size; i++) {
-
-					System.out.print(tempNode.value);
-					if (i != size - 1) {
-						System.out.print(" -> ");
-					}
-					tempNode = tempNode.previous;
-
-				}
-
+				head = head.next;
+				head.previous = null;
+				size--;
 			}
-		}
-		
-		// Search a Double  Linked list
-		public boolean searchDoublelinkedList(int nodeValue) {
+			// deleting at end of DLL
+		} else if (location >= size) {
 
+			// find node before last node
+			DoubleLLNode tempNode = tail.previous;
+
+			if (size == 1) {
+				head = tail = null;
+				size--;
+				return;
+				// deleting first element in a size more than 1
+			} else {
+				tempNode.next = null;
+				tail = tempNode;
+				size--;
+			}
+
+		} else {
+
+			// find node at location
 			DoubleLLNode tempNode = head;
-
-			if (head != null) {
-
-				for (int i = 0; i < size; i++) {
-
-					if (tempNode.value == nodeValue) {
-
-						System.out.println("Searched value  exists at location: " + i);
-						return true;
-					}
-
-					tempNode = tempNode.next;
-
-				}
-
+			for (int i = 0; i < location - 1; i++) {
+				tempNode = tempNode.next;
 			}
-			System.out.println("Node does not exist");
-			return false;
+
+			tempNode.next = tempNode.next.next;
+			tempNode.next.previous = tempNode;
+			size--;
+
 		}
 
+	}
 
 }

@@ -32,9 +32,13 @@ public class MainDoubleLinkedList {
 		// Reverse Traverse Double linked list
 		System.out.println("\nTraverse a Double linked List");
 		dLL.reverseTraverseDoubleLinkedList();
-		
+
 		System.out.println("\n\nSearch the CSLL");
 		dLL.searchDoublelinkedList(37);
+
+		// delete from a linked list
+		dLL.deleteNode(9);
+		System.out.println("\nThe number of nodes after a node delete is: " + dLL.size);
 
 	}
 
