@@ -86,5 +86,30 @@ public class DoubleLinkedList {
 
 		}
 	}
+	
+	// Reverse Traversing a double Linked list
+		public void reverseTraverseDoubleLinkedList() {
+
+			DoubleLLNode tempNode = tail;
+
+			if (head == null) {
+				System.out.println("Linked does not exist");
+			} else {
+				
+				
+
+				for (int i = 0; i <size; i++) {
+
+					System.out.print(tempNode.value);
+					if (i != size - 1) {
+						System.out.print(" -> ");
+					}
+					tempNode = tempNode.previous;
+
+				}
+
+			}
+		}
+
 
 }

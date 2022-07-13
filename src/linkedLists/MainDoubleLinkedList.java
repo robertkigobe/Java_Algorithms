@@ -28,6 +28,10 @@ public class MainDoubleLinkedList {
 		//Traverse Double linked list
 		System.out.println("Traverse a Double linked List\n");
 		dLL.traverseDoubleLinkedList();
+		
+		//Reverse Traverse Double linked list
+				System.out.println("\nTraverse a Double linked List");
+				dLL.reverseTraverseDoubleLinkedList();
 
 	}
 
