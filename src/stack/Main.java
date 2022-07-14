@@ -10,7 +10,24 @@ public class Main {
 		
 		Boolean isFull = newStack.isFull();
 		System.out.println(isFull);
+		
+		newStack.pushStack(6);
+		newStack.pushStack(62);
+		newStack.pushStack(26);
+		newStack.pushStack(36);
+		newStack.pushStack(46);
+		newStack.pushStack(76);
+		
+		int value = newStack.pop();
+		System.out.println(value);
+		
+		int peekValue = newStack.peek();
+		System.out.println(peekValue);
+		
+		newStack.deleteStack();
 
+	
+		
 	}
 	
 	
