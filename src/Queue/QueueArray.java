@@ -29,30 +29,66 @@ public class QueueArray {
 		}
 
 	}
-	
+
+	// Enqueue
 	public void enqueue(int value) {
-		
-		//check if queue is full
-		if(isFull()) {
+
+		// check if queue is full
+		if (isFull()) {
 			System.out.println("Queue is already full");
 			return;
-		} else 
-			// check if empty initialize beginning index
-		if (isEmpty()){
+		} else
+		// check if empty initialize beginning index
+		if (isEmpty()) {
 			beginingOfQueue = 0;
 			topOfQueue++;
 			arr[topOfQueue] = value;
-			System.out.println("Value "+ value +" succefully inserted at begining of Queue");
-		} else 
-			//else insert 
+			System.out.println("Value " + value + " succefully inserted at begining of Queue");
+		} else
+		// else insert
 		{
 			topOfQueue++;
 			arr[topOfQueue] = value;
-			System.out.println("Value "+ value +" succefully inserted in the Queue");
-			
+			System.out.println("Value " + value + " succefully inserted in the Queue");
+
 		}
-		
-		
+
+	}
+
+	// Dequeue
+	public int deQueue() {
+		// Check is empty
+		if (isEmpty()) {
+			System.out.println("The Queue is empty");
+			return -1;
+		} else
+		// else return first element which is begining of queue
+		{
+			int value = arr[beginingOfQueue];
+			beginingOfQueue++;
+			if (beginingOfQueue > topOfQueue) {
+				// change the begining of the queue to next
+				beginingOfQueue = topOfQueue = -1;
+			}
+			return value;
+		}
+
+	}
+	
+	//Peek method
+	public int peek() {
+		if(!isEmpty()) {
+			int value = arr[beginingOfQueue];
+			return value;
+		} else {
+			return -1;
+		}
+	}
+	
+	//Delete queue
+	public void deleteQueue() {
+		arr = null;
+		System.out.println("Queue succesfully deleted");
 	}
 
 }
