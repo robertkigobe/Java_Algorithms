@@ -1,31 +1,31 @@
 package Queue;
 
-public class MainQueueLinkedList {
+public class MainQueueCircularLinkedList {
 
 	public static void main(String[] args) {
 
-		QueueLinkedList ql = new QueueLinkedList();
-		
-		Boolean isEmpty = ql.isEmpty();
-		Boolean isFull = ql.isFull();
+		QueueCircularLinkedList cql = new QueueCircularLinkedList(5);
+		Boolean isEmpty = cql.isEmpty();
+		Boolean isFull = cql.isFull();
 		System.out.println(isEmpty);
 		System.out.println(isFull);
 
-		ql.enqueue(18);
-		ql.enqueue(52);
-		ql.enqueue(36);
-		ql.enqueue(42);
-		ql.enqueue(50);
-		ql.enqueue(67);
-		isFull = ql.isFull();
+		cql.enQueue(18);
+		cql.enQueue(52);
+		cql.enQueue(36);
+		cql.enQueue(42);
+		cql.enQueue(50);
+		cql.enQueue(67);
+		isFull = cql.isFull();
 		System.out.println(isFull);
 
-		int resultDeQueue = ql.deQueue();
+		int resultDeQueue = cql.deQueue();
 		System.out.println(resultDeQueue + " on first Dequeue");
 		
-		int resultDeQueue1 = ql.deQueue();
+		int resultDeQueue1 = cql.deQueue();
 		System.out.println(resultDeQueue1 + " on second Dequeue");
 		
+		/*
 
 		int resultPeek = ql.peek();
 		System.out.println(resultPeek + " on first peek");
@@ -35,7 +35,7 @@ public class MainQueueLinkedList {
 		
 		ql.deleteQueue();
 		
-
+*/
 	}
 
 }
