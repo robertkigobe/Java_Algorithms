@@ -68,4 +68,29 @@ public class BinaryTreeLL {
 		}
 
 	}
+
+	// Level Order search
+	public void searchBT(String value) {
+
+		Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+		queue.add(root);
+		while (!queue.isEmpty()) {
+			BinaryNode presentNode = queue.remove();
+			if (presentNode.value == value) {
+
+				System.out.println("\nThe value " + presentNode.value + " has been found");
+				return;
+			} else {
+				if (presentNode.left != null) {
+					queue.add(presentNode.left);
+				}
+				if (presentNode.right != null) {
+					queue.add(presentNode.right);
+				}
+			}
+		}
+
+		System.out.println("The value is " + value + " is not found");
+
+	}
 }

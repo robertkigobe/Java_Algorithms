@@ -48,6 +48,8 @@ public class Main {
 		
 		System.out.print("\nLevelOrder===>");
 		btll.levelOrder();
+		
+		btll.searchBT("N5");
 	}
 
 }
