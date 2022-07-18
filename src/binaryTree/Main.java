@@ -42,6 +42,12 @@ public class Main {
 		
 		System.out.print("\nInOrder===>");
 		btll.inOrder(btll.root);
+		
+		System.out.print("\nPostOrder===>");
+		btll.postOrder(btll.root);
+		
+		System.out.print("\nLevelOrder===>");
+		btll.levelOrder();
 	}
 
 }
