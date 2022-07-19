@@ -37,7 +37,7 @@ public class Main {
 		System.out.print("\nLevelOrder===>");
 		btll.levelOrder();
 		
-		System.out.println("\nDeepest===>"+btll.getDepeestNode().value);
+		System.out.println("\nDeepest===>"+btll.getDeepestNode().value);
 		
 		btll.deleteDeepestNode();
 		
