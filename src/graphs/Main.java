@@ -22,6 +22,9 @@ public class Main {
 		g.addUnDirectedNode(3,4);
 		
 		System.out.print(g.toString());
+		System.out.println();
+		
+		g.bfs();
 		
 
 	}

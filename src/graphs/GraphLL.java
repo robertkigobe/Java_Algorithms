@@ -41,16 +41,15 @@ public class GraphLL {
 	    return s.toString();
 	  }
 
-/*
 	  // BFS internall
-	  void bfsVisit(GraphNode node) {
-	    LinkedList<GraphNode> queue = new LinkedList<GraphNode>();
+	  void bfsVisit(GraphNodeLL node) {
+	    LinkedList<GraphNodeLL> queue = new LinkedList<GraphNodeLL>();
 	    queue.add(node);
 	    while (!queue.isEmpty()) {
-	      GraphNode currentNode = queue.remove(0);
+	      GraphNodeLL currentNode = queue.remove(0);
 	      currentNode.isVisited = true;
 	      System.out.print(currentNode.name + " ");
-	      for (GraphNode neighbor : currentNode.neighbors) {
+	      for (GraphNodeLL neighbor : currentNode.neighbors) {
 	        if (!neighbor.isVisited) {
 	          queue.add(neighbor);
 	          neighbor.isVisited=true;
@@ -60,12 +59,13 @@ public class GraphLL {
 	  }
 
 	  void bfs() {
-	    for (GraphNode node : nodeList) {
+	    for (GraphNodeLL node : nodeList) {
 	      if (!node.isVisited) {
 	        bfsVisit(node);
 	      }
 	    }
 	  }
+	  /*
 
 	  void dfsVisit(GraphNode node) {
 	    Stack<GraphNode> stack = new Stack<>();
