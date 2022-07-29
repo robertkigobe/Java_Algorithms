@@ -24,7 +24,9 @@ public class MainLL {
 		System.out.print(g.toString());
 		
 		System.out.println();
-		g.bfs(); //.................T = o(V+E)........S = o(V+E)
+		//g.bfs(); //.................T = o(V+E)........S = o(V+E)
+		
+		g.dfs();
 		
 
 	}

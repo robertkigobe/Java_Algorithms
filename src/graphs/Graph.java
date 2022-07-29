@@ -70,38 +70,32 @@ public class Graph {
 		}
 	}
 
-	public void bfs() {
-		for (GraphNode node : nodeList) {
-			if (!node.isVisited) {
-				bfsVisit(node);
-			}
-		}
-	}
+	  void dfsVisit(GraphNode node) {
+		    Stack<GraphNode> stack = new Stack<>();
+		    stack.push(node);
+		    while(!stack.isEmpty()) {
+		      GraphNode currentNode = stack.pop();
+		      currentNode.isVisited = true;
+		      System.out.print(currentNode.name + " ");
+		      ArrayList<GraphNode> neighbors = getNeighbors(currentNode);
+		      for (GraphNode neighbor : neighbors) {
+		        if (!neighbor.isVisited) {
+		          stack.push(neighbor);
+		          neighbor.isVisited = true;
+		        }
+		      }
 
-	void dfsVisit(GraphNode node) {
-		Stack<GraphNode> stack = new Stack<>();
-		stack.push(node);
-		while (!stack.isEmpty()) {
-			GraphNode currentNode = stack.pop();
-			currentNode.isVisited = true;
-			System.out.print(currentNode.name + " ");
-			ArrayList<GraphNode> neighbors = getNeighbors(currentNode);
-			for (GraphNode neighbor : neighbors) {
-				if (!neighbor.isVisited) {
-					stack.push(neighbor);
-					neighbor.isVisited = true;
-				}
-			}
+		    }
+		  }
 
-		}
-	}
+		  void dfs() {
+		    for (GraphNode node : nodeList) {
+		      if(!node.isVisited) {
+		        dfsVisit(node);
+		      }
+		    }
+		  }
 
-	void dfs() {
-		for (GraphNode node : nodeList) {
-			if (!node.isVisited) {
-				dfsVisit(node);
-			}
-		}
-	}
+
 
 }

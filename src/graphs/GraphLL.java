@@ -65,16 +65,16 @@ public class GraphLL {
 	      }
 	    }
 	  }
-	  /*
+	  
 
-	  void dfsVisit(GraphNode node) {
-	    Stack<GraphNode> stack = new Stack<>();
+	  void dfsVisit(GraphNodeLL node) {
+	    Stack<GraphNodeLL> stack = new Stack<GraphNodeLL>();
 	    stack.push(node);
 	    while (!stack.isEmpty()) {
-	      GraphNode currentNode = stack.pop();
+	      GraphNodeLL currentNode = stack.pop();
 	      currentNode.isVisited = true;
 	      System.out.print(currentNode.name + " ");
-	      for (GraphNode neighbor : currentNode.neighbors) {
+	      for (GraphNodeLL neighbor : currentNode.neighbors) {
 	        if (!neighbor.isVisited) {
 	          stack.push(neighbor);
 	          neighbor.isVisited=true;
@@ -84,14 +84,14 @@ public class GraphLL {
 	  }
 
 	  void dfs() {
-	    for (GraphNode node : nodeList) {
+	    for (GraphNodeLL node : nodeList) {
 	      if(!node.isVisited) {
 	        dfsVisit(node);
 	      }
 	    }
 	  }
 
-*/
+
 
 
 	}
