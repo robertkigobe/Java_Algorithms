@@ -28,7 +28,7 @@ ArrayList<GraphNodeAM> nodeList = new ArrayList<GraphNodeAM>();
 		g.addUndirectedEdge(4, 5);
 		g.addUndirectedEdge(5, 6);
 		
-		g.BFSForSSSPP(nodeList.get(0));
+		g.BFSForSSSPP(nodeList.get(0)); //............T = O(E) S=O(V)
 
 	}
 
